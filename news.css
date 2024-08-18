@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  /* CSS styles */
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-logo span {
+    font-size: 1.8rem;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    list-style-type: none;
+    column-gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-nav li {
+    margin-left: 20px;
+    font-size: 1.1rem;
+  }
+
+  .navbar-nav li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .navbar-nav li a:hover {
+    color: #ccc;
+  }
+
+  .navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .search-bar {
+    margin: 2% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .search-bar input {
+    padding: 15px 30px;
+    width: 50%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid #333;
+    font-size: 1rem;
+  }
+
+  .search-bar input:focus {
+    outline: none;
+    border: 2px solid #333;
+  }
+  .search-bar button {
+    font-size: 1rem;
+    padding: 15px 20px ;
+    background-color: #333;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+
+  }
+  .search-bar button:active {
+    background: transparent;
+    outline: none;
+    border: 1px solid #333;
+    color: #000;
+
+  }
+  .wrapper  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px, 1fr));
+    gap: 20px;
+    padding: 5%;
+    position: relative;
+  }
+  #loader {
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    width: 40%;
+    border-radius: 40px;
+    display: none;
+  }
+  .container {
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(159, 154, 154, 0.2);
+    border-radius: 10px;
+    background: #fff;
+  }
+  .container img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+  }
+  .content {
+    padding: 10px;
+    text-align: center;
+  }
+  .content h3 {
+    font-size: 1rem;
+    padding: 10px;
+ 
+  }
+  .content p {
+    font-size: 0.8rem;
+  
+  }
+  .puplished {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .puplished p {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .puplished p span {
+    color: rgb(21, 18, 18);
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+  .puplished a {
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+   .content > ul li {
+    font-size: 0.8rem;
+   }
+
+  ul * {
+    list-style-type: none;
+  }
+  @media (max-width :761px) {
+    .search-bar input {
+      width: 70%;
+    }
+
+
+  }
+  @media (max-width: 644px) {
+    .container {
+      width: 83%;
+      margin: 0 8%;
+    }
+    .search-bar input {
+      width: 70%;
+      font-size: 0.8rem;
+    }
+    .search-bar button {
+      font-size: 0.8rem;
+    }
+    .container img{
+      width: 100%;
+      height: 250px;
+    }
+
+  }
+
+  @media (max-width: 620px) {
+    .navbar-nav {
+      display: none;
+    }
+
+    .navbar-toggle {
+      display: block;
+    }
+
+    .navbar-nav.show {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 40%;
+      background-color: #333;
+      padding: 10px 0 20px 10px ;
+      border-bottom-left-radius: 10px;
+    }
+
+    .navbar-nav.show li {
+      margin: 10px 0;
+    }
+  }
+  @media (max-width : 450px) {
+    #loader {
+      position: absolute;
+      top: 40%;
+      left: 13%;
+      width: 80%;
+      border-radius: 40px;
+      display: none;
+    }
+  }
