@@ -214,6 +214,8 @@
       background-color: #333;
       padding: 10px 0 20px 10px ;
       border-bottom-left-radius: 10px;
+  
+z-index: 1000;
     }
 
     .navbar-nav.show li {
