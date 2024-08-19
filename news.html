@@ -46,54 +46,7 @@
 
 <script src="news.js"></script>
 
-  <!-- <script>
 
-    const apikey = '22a8e9dba2d7443fb6128acbdfe703b8';
-    async function randomQuote() {
-  const response = await fetch(`https://newsapi.org/v2/everything?q=programming&from=2024-07-17&sortBy=publishedAt&apiKey=${apikey}`)
-  const data = await response.json()
-
-  const news =  data.articles;
-
-  addDom(news)
-
-}
-
-const container = document.querySelector('.wrapper');
-
-
-const addDom = (news) => {
-
-  news.forEach(data => {
-
-    const titleSlice = data.title.slice(0, 35) + "....";
-
-    const contentSlice = data.content.slice(0, 60) + "....";
-    container.innerHTML += `   <div class="container">
-   
-    <img src="${data.
-   urlToImage}" alt="" width="200px">
-    <h3 id="title">${data.title.slice(0, 35) + "...."}</h3>
-    <p id="content">${data.content.slice(0, 150)}</p>
-    </div>`
-
-  
-  });
-
-  const titile = document.querySelector('#title');
-
-}
-
-// + You need to call the function
-randomQuote()
-
-  //  const obj = {
-  //   content : 'Elon musk created the new model of tesla'
-  //  };
-
-  //  const obj2 = obj.content.slice(0,25) + "......"
-  //  console.log(obj2)
-  </script> -->
   
 </body>
 </html>
