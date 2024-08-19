@@ -22,9 +22,9 @@ container.style.background = 'rgb(239, 239, 239)';
 loader.style.display = 'none';
 
 
-const news =  data.articles;
+const data =  data.articles;
 
-addDom(news)
+addDom(data)
 
 }
 
@@ -45,9 +45,9 @@ const addDom = (news) => {
   news.forEach(data => {
     console.log(data)
 
-    const titleSlice = data.title.slice(0, 35) + "....";
+    // const titleSlice = data.title.slice(0, 35) + "....";
 
-    const contentSlice = data.content.slice(0, 60) + "....";
+    // const contentSlice = data.content.slice(0, 60) + "....";
     container.innerHTML += `   <div class="container">
    
     <img src="${data.
@@ -63,14 +63,9 @@ const addDom = (news) => {
   
     </div>`
 
-    const link = document.querySelector('.container');
-
-    // container.addEventListener('click', () => {
-    //   document.body = data.url;
-    // })
 
   
   });
 }
 
-news(`https://newsapi.org/v2/everything?q=programming&from=2024-07-17&sortBy=publishedAt&apiKey=${apikey}`)
+news(`https://newsapi.org/v2/everything?q=tesla&from=2024-07-17&sortBy=publishedAt&apiKey=${apikey}`)
